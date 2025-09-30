@@ -1,0 +1,93 @@
+/* --- No changes needed in this section --- */
+@font-face {
+  font-family: gta;
+  src: url(./THEBOLDFONT-FREEVERSION.otf);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+}
+
+/* --- Changes are in this #main section --- */
+#main {
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(to bottom,rgba(0, 0, 0, 0) 5%, rgba(0, 0, 0, 1)100%),
+              url(https://www.rockstargames.com/VI/_next/image?url=%2FVI%2F_next%2Fstatic%2Fmedia%2Fhero.443c6d70.jpg&w=2048&q=75);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  
+  /* ADD THIS: Establishes the positioning context */
+  position: relative; 
+  
+  /* We keep flexbox just to easily handle the top heading */
+  display: flex;
+  flex-direction: column;
+
+  /* REMOVE: We no longer need this */
+  /* justify-content: space-between; */ 
+
+  padding: 20px 8%; 
+}
+
+#heading {
+    font-family: gta;
+    font-size: 80px;
+    color: whitesmoke;
+    text-align: center;
+}
+
+/* --- Changes are in this .content-block section --- */
+.content-block {
+  /* ADD THESE PROPERTIES FOR POSITIONING */
+  position: absolute;
+  bottom: 15%; /* Move it 25% up from the bottom */
+  left: 12%;   /* Keep it 8% from the left, same as the padding */
+
+  /* REMOVE: This is not needed with absolute positioning */
+  /* width: fit-content; */
+}
+
+#heading-2 {
+  font-family: sans-serif;
+  color: #FFF9CB;
+  font-size: 55px;
+}
+
+/* --- No changes needed from here down --- */
+p {
+
+  font-family: Arial, Helvetica, sans-serif;
+  color: #FFFFFF;
+  font-size: 20px;
+  margin-top: 10px;
+  position: relative;
+  left: 2%;
+}
+
+.button-group {
+
+  display: flex;
+  gap: 15px;
+  margin-top: 20px;
+  position: relative;
+  left: 2%;
+}
+
+#Download-button, #explore-button {
+  padding: 10px 14px;
+  border-radius: 8px;
+  background-color: #f8f4d0;
+  border: none;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+
+}
